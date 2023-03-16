@@ -15,11 +15,10 @@ func updateAnimation():
 		if velocity.x < 0: direction = "Left"
 		elif velocity.x > 0: direction = "Right"
 		elif velocity.y < 0: direction = "Up"
-		print(direction)
 	
 		animations.play("walk" + direction)
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	handleinput()
 	move_and_slide()
 	updateAnimation()
