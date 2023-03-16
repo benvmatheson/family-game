@@ -1,7 +1,7 @@
-[gd_scene load_steps=9 format=3 uid="uid://wjda6gp2qiav"]
+[gd_scene load_steps=9 format=3 uid="uid://cghwg2qwvv4xp"]
 
 [ext_resource type="Texture2D" uid="uid://bcfxgeww8vw07" path="res://art/SpriteSheet.png" id="1_4f61s"]
-[ext_resource type="Script" path="res://Player/player.gd" id="1_8f6v5"]
+[ext_resource type="Script" path="res://player.gd" id="1_8f6v5"]
 
 [sub_resource type="Animation" id="Animation_dgjwu"]
 length = 0.001
@@ -100,11 +100,15 @@ _data = {
 }
 
 [node name="Player" type="CharacterBody2D"]
+z_index = 1
+y_sort_enabled = true
 script = ExtResource("1_8f6v5")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = 1
+y_sort_enabled = true
 texture_filter = 1
-position = Vector2(106, 57)
+position = Vector2(123, 64)
 texture = ExtResource("1_4f61s")
 hframes = 4
 vframes = 7
